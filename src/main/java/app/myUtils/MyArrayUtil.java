@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MyArrayUtil {
     @Author(firstName = "Mykyta", lastName = "Herasymov")
-    @MethodInfo(name = "mergeSort", type = "T (Generic)", description = "Recursively sorts a list using merge sort algorithm")
+    @MethodInfo(name = "mergeSort", type = "List<T>", description = "Recursively sorts a list using merge sort algorithm")
     public static <T extends Comparable<T>> List<T> mergeSort(List<T> arr) {
         if (arr.size() <= 1) {
             return arr;
@@ -24,7 +24,7 @@ public class MyArrayUtil {
         return merge(left, right);
     }
     @Author(firstName = "Serhii", lastName = "Herasymov")
-    @MethodInfo(name = "mergeSort", type = "T (Generic)", description = "Merges two sorted lists into one sorted list")
+    @MethodInfo(name = "merge", type = "List<T>", description = "Merges two sorted lists into one sorted list")
     private static <T extends Comparable<T>> List<T> merge(List<T> left, List<T> right) {
         List<T> result = new ArrayList<>();
         int i = 0, j = 0;
@@ -48,7 +48,7 @@ public class MyArrayUtil {
         return result;
     }
     @Author(firstName = "Olha", lastName = "Nikiforova")
-    @MethodInfo(name = "mergeSort", type = "int", description = "Performs binary search on a list to find the target element's index")
+    @MethodInfo(name = "binarySearch", type = "int", description = "Performs binary search on a list to find the target element's index")
     public static <T extends Comparable<T>> int binarySearch(List<T> array, T target) {
         int left = 0;
         int right = array.size() - 1;
